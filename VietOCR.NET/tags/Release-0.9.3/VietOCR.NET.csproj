@@ -1,0 +1,315 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{24669862-3162-44AE-A050-E5205A683828}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VietOCR.NET</RootNamespace>
+    <AssemblyName>VietOCR.NET</AssemblyName>
+    <StartupObject>VietOCR.NET.Program</StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <ApplicationRevision>0</ApplicationRevision>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="tessnet2, Version=2.0.3.5, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\tessnet2.dll</HintPath>
+    </Reference>
+    <Reference Include="VietKeyInput, Version=2.0.3073.22842, Culture=neutral, PublicKeyToken=7c2367f2fb8ce189, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\VietKeyInput.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI.Designer.cs">
+      <DependentUpon>GUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Controls\ScrollablePictureBox.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ScrollablePictureBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>GUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HtmlHelpForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>HtmlHelpForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ChangeCaseDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangeCaseDialog.Designer.cs">
+      <DependentUpon>ChangeCaseDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ClonableToolStripMenuItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ScrollablePictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ScrollablePictureBox.Designer.cs">
+      <DependentUpon>ScrollablePictureBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ToolStripRadioButtonMenuItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FormLocalizer.cs" />
+    <Compile Include="GUIWithFormat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIWithFormat.Designer.cs">
+      <DependentUpon>GUIWithFormat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUIWithInputMethod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIWithInputMethod.Designer.cs">
+      <DependentUpon>GUIWithInputMethod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUIWithRegistry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIWithRegistry.Designer.cs">
+      <DependentUpon>GUIWithRegistry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUIWithWatch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIWithWatch.Designer.cs">
+      <DependentUpon>GUIWithWatch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HtmlHelpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HtmlHelpForm.Designer.cs">
+      <DependentUpon>HtmlHelpForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImageIOHelper.cs" />
+    <Compile Include="OCR.cs" />
+    <Compile Include="OCRImageEntity.cs" />
+    <Compile Include="Postprocessing\EngPP.cs" />
+    <Compile Include="Postprocessing\IPostProcessor.cs" />
+    <Compile Include="Postprocessing\Processor.cs" />
+    <Compile Include="Postprocessing\ProcessorFactory.cs" />
+    <Compile Include="Postprocessing\TextUtilities.cs" />
+    <Compile Include="Postprocessing\ViePP.cs" />
+    <Compile Include="StatusForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StatusForm.Designer.cs">
+      <DependentUpon>StatusForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Watcher.cs" />
+    <Compile Include="WatchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WatchForm.Designer.cs">
+      <DependentUpon>WatchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WIA\WiaOperationException.cs" />
+    <Compile Include="WIA\WiaScannerAdapter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Data\ISO639-3.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="tessdata\configs\api_config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="tessdata\configs\box.train">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="tessdata\configs\inter">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="tessdata\configs\kannada">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="tessdata\configs\makebox">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="tessdata\configs\Makefile.am">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="tessdata\configs\Makefile.in">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="tessdata\configs\unlv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="tessdata\eng.DangAmbigs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="tessdata\eng.freq-dawg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="tessdata\eng.inttemp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="tessdata\eng.normproto">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="tessdata\eng.pffmtable">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="tessdata\eng.unicharset">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="tessdata\eng.user-words">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="tessdata\eng.word-dawg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="tessdata\vie.DangAmbigs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="tessdata\vie.freq-dawg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="tessdata\vie.inttemp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="tessdata\vie.Microfeat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="tessdata\vie.normproto">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="tessdata\vie.pffmtable">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="tessdata\vie.unicharset">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="tessdata\vie.user-words">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="tessdata\vie.word-dawg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <EmbeddedResource Include="ChangeCaseDialog.resx">
+      <DependentUpon>ChangeCaseDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeCaseDialog.vi-VN.resx">
+      <DependentUpon>ChangeCaseDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI.vi-VN.resx">
+      <DependentUpon>GUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUIWithInputMethod.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>GUIWithInputMethod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUIWithInputMethod.vi-VN.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>GUIWithInputMethod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="readme_cs.html" />
+    <EmbeddedResource Include="readme_cs_vi.html" />
+    <EmbeddedResource Include="Properties\Resources.vi-VN.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StatusForm.resx">
+      <DependentUpon>StatusForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WatchForm.resx">
+      <DependentUpon>WatchForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WatchForm.vi-VN.resx">
+      <DependentUpon>WatchForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <Content Include="samples\vietsample.tif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="samples\vietsample1.tif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="samples\vietsample2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="samples\vietsample2.tif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="versionchanges_cs.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="WIA">
+      <Guid>{94A0E92D-43C0-494E-AC29-FD45948A5221}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

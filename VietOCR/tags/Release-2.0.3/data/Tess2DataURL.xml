@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+  <comment>Tesseract 2.0x language data packs</comment>
+  <entry key="deu">http://tesseract-ocr.googlecode.com/files/tesseract-2.00.deu.tar.gz</entry>
+  <entry key="eng">http://tesseract-ocr.googlecode.com/files/tesseract-2.00.eng.tar.gz</entry>
+  <entry key="fra">http://tesseract-ocr.googlecode.com/files/tesseract-2.00.fra.tar.gz</entry>
+  <entry key="ita">http://tesseract-ocr.googlecode.com/files/tesseract-2.00.ita.tar.gz</entry>
+  <entry key="lit">http://ftp.akl.lt/users/dgvirtual/tesseract-ocr-lit_2.03_0.3-unofficial0.zip</entry>
+  <entry key="nld">http://tesseract-ocr.googlecode.com/files/tesseract-2.00.nld.tar.gz</entry>
+  <entry key="sic">http://tesseract-ocr.googlecode.com/files/tesseract-2.00.que-classic.tar.gz</entry>
+  <entry key="spa">http://tesseract-ocr.googlecode.com/files/tesseract-2.00.spa.tar.gz</entry>
+  <entry key="deu-f">http://tesseract-ocr.googlecode.com/files/tesseract-2.01.deu-f.tar.gz</entry>
+  <entry key="por">http://tesseract-ocr.googlecode.com/files/tesseract-2.01.por.tar.gz</entry>
+  <entry key="vie">http://sourceforge.net/projects/vietocr/files/lang%20data%20for%20tesseract-ocr/vietnamese%20language%20pack/tesseract-2.03.vie.zip</entry>
+  <entry key="vie-1">http://sourceforge.net/projects/vietocr/files/lang%20data%20for%20tesseract-ocr/vietnamese%20language%20pack/tesseract-2.03.vie-1.vni-tcvn3.zip</entry>
+  <entry key="eus">http://tesseract-ocr.googlecode.com/files/tesseract-2.04.eus.tar.gz</entry>
+  <entry key="heb">http://roidayan.com/downloads/tesseract-ocr-hebrew/tesseract-2.00.heb.tar.gz</entry>
+</properties>

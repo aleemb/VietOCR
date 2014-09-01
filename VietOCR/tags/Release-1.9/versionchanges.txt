@@ -1,0 +1,164 @@
+VietOCR Change Summary
+
+Version 0.1 (16 Dec 2007): 
+- Proof-of-concept design
+- Support TIFF image formats
+
+Version 0.2 (22 Dec 2007): 
+- Add support for JPEG, GIF, BMP, PNG formats
+- Add post-processing for Vietnamese to improve accuracy
+- Add recognition of selected area on image
+
+Version 0.3 (23 Dec 2007):
+- Add file drag-drop
+
+Version 0.4 (24 Dec 2007):
+- Refactor
+
+Version 0.5 (19 Jan 2008):
+- Make selection box movable
+
+Version 0.6 (21 Jan 2008):
+- Make selection box resizable and animated
+
+Version 0.7 (10 Feb 2008):
+- Fix bugs with Tesseract path not set
+- Improve handling of Vietnamese
+
+Version 0.7.1 (23 Feb 2008):
+- Fix an ArrayIndexOutOfBoundsException that aborted program launch
+
+Version 0.8 (24 Feb 2008):
+- Add a context menu for the textarea
+- Add support for selection of Look and Feel
+
+Version 0.8.1 (25 Feb 2008):
+- Fix a bug with not setting image format for OCR All Pages operation
+
+Version 0.8.2 (3 Mar 2008):
+- Display a warning message if JAI Image I/O library is not installed
+
+Version 0.8.3 (6 Mar 2008):
+- Display appropriate message when Tesseract engine crashes
+
+Version 0.9 (5 Apr 2008)
+- Add a Help file
+- Better cleanup of temporary working files
+- Fix the issue involving filepaths containing spaces
+
+Version 0.9.1 (10 Apr 2008)
+- Improve design by code refactoring
+- Bundle JAI Image I/O 1.1 library
+
+Version 0.9.2 (4 May 2008)
+- Minor improvements
+
+Version 0.9.3 (21 June 2008)
+- Improve Vietnamese postprocessing
+- Use Java 6.0
+- Use Tesseract 2.03 OCR engine
+- Use Vietnamese language data for Tesseract 2.03 (data for 2.01 crashes frequently with Tesseract 2.03)
+
+Version 0.9.4 (21 October 2008)
+- Localize user interface
+
+Version 0.9.5 (29 October 2008)
+- Integrate scanning support via WIA Automation Library v2.0 and JACOB Library
+
+Version 0.9.6 (2 November 2008)
+- Fix an error with path in Linux
+- Additional instruction for configuring Tesseract on Linux
+
+Version 0.9.7 (10 November 2008)
+- Implement rotate image functionality
+- Increased Maximum Heap Size to address OutOfMemory exceptions during image manipulations (fit, zoom, rotate)
+- Improve performance by passing IIOImage rather than File to OCR wrapper
+
+Version 0.9.8 (30 November 2008)
+- Minor fixes and various improvements
+
+Version 0.9.9 (10 January 2009)
+- Revamp localization codes
+- Add rudimentary support for English postprocessing
+
+Version 0.9.10 (18 January 2009)
+- Add watch folder monitor for Batch Processing
+
+Version 0.9.11 (15 March 2009)
+- Add text formatting functionality
+
+Version 0.9.12 (25 April 2009)
+- Fix the way TESSDATA_PREFIX environment variable handled in Linux
+- Clean up temporary files if errors occur during OCR operations
+- Fix a regression EOL bug with output files in Windows
+
+Version 0.9.13 (21 June 2009)
+- Bundle Tesseract 2.04RC engine (Windows executable)
+- Add indeterminate progressbar for (more animated) task status
+- Remove Vietnamese-glyph font filter to now show all system fonts
+- Change FontDialog's default Preview text to the standard English pangram to make it more universal
+- Modify SimpleFilter to accept multiple file extensions
+- Add All Image Files filter
+
+Version 1.0 (18 July 2009)
+- Bundle Tesseract 2.04 engine (Windows executable)
+- Add more language codes to ISO639-3.xml file
+- Add a pangram.xml file for displaying appropriate Preview text in the Font Dialog for the OCR language currently selected
+- Moved various settings to the Options dialog
+- Remove the option of Locating Tesseract on Windows. Current Tesseract is the executable bundled inside the program.
+- Add support for custom text replacement in postprocessing
+
+Version 1.0.1 (1 August 2009)
+- Refactor for improvements
+
+Version 1.1 (6 September 2009)
+- Merge TIFF functionality
+
+Version 1.2 (10 September 2009)
+- Add support for PDF-to-image conversion using Ghost4J, JNA, and GPL Ghostscript
+
+Version 1.3 (3 October 2009)
+- Improve exception handling with appropriate error messages
+- Improve handling of PDF documents that has many (>50) pages. Putting too many images, as a result of PDF extraction, in a multi-page TIFF eventually will generate out-of-memory exceptions
+- Split PDF functionality
+
+Version 1.4 (24 October 2009)
+- Publish OCR interim results to produce more responsive UI performance, improving user experience
+- Implement cancellation of running OCR tasks
+- Merge PDF functionality
+
+Version 1.5 (21 December 2009)
+- Add support for execution from command line
+- Add support for paste image from clipboard
+- Add support for JPEG2000 and PNM image types
+
+Version 1.6 (30 January 2010)
+- Fix an image size issue and associated scale factor when toggling between Fit Image vs. Actual Size after resizing window
+- Add unit test
+- Improve post-OCR correction for Vietnamese
+- Bundle Vietnamese language data for VNI & TCVN3 (ABC) fonts (VNI-Aptima, VNI-Book, VNI-Helve, VNI-Palatin, VNI-Tekon, VNI-Times, VNI-Univer; .VnTime, .VnArial)
+
+Version 1.6.1 (20 March 2010)
+- Fix a NullPointerException due to an uninitialized variable when launching the application the very first time. This regression bug was introduced in version 1.6.
+
+Version 1.7 (14 April 2010)
+- Add provision to load UTF-8 text file into textarea
+- Add Recent Files submenu
+- Add Save button on toolbar
+- Fix scale factor, offset issues in image manipulation
+- Improve postprocessing for Vietnamese
+- Add support for VNI-Centur, VNI-Goudy, VNI-Oxford, VNI-Zap fonts to Vietnamese language data
+
+Version 1.8 (6 September 2010)
+- Read output and error streams to prevent subprocess to block or deadlock due to limited buffer size for standard output streams
+- Fix a problem in which paste (image) event fires twice
+- Fix a problem with subimages generated by selection box on Linux
+- Display image information
+- Add Screenshot Mode, which rescales low-resolution images to 300 DPI to be more suitable for OCR operations
+
+Version 1.9 (2 October 2010)
+- Integrate a Java binding for Hunspell library to provide spellchecking and spellcheck-as-you-type functionality. Include English and Vietnamese dictionaries
+- Add support for a custom dictionary user.dic
+- List in correct order files generated from PDF conversion
+- Upgrade JACOB library to version 1.15-M3
+- Preset Tesseract path on Linux to /usr/bin, the default install location of Tesseract

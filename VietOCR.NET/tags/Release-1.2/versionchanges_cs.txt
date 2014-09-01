@@ -1,0 +1,73 @@
+VietOCR.NET Change Summary
+
+Version 0.1 (7 June 2008): 
+- Proof-of-concept design
+- Added post-processing for Vietnamese to improve accuracy
+- Integrated Tessnet2 .NET wrapper for Tesseract 2.03 OCR engine (http://www.pixel-technology.com/freeware/tessnet2/)
+- Use Vietnamese language data for Tesseract 2.03 (data for 2.01 crashes frequently with Tesseract 2.03)
+- Integrated VietKeyInput class library
+
+Version 0.2 (10 June 2008): 
+- Improved post-processing for Vietnamese
+- Added Help file
+
+Version 0.3 (21 June 2008): 
+- Added file drag-n-drop support
+- Added selection rectangle
+
+Version 0.3.1 (22 June 2008): 
+- Made Picturebox scrollable with mouse wheel
+
+Version 0.4 (1 July 2008): 
+- Code refactored
+
+Version 0.4.2 (1 August 2008): 
+- Replaced RTF-based help form with HTML-based
+
+Version 0.4.3 (5 August 2008): 
+- Fixed mouse wheel scrolling behavior of PictureBox and TextBox
+- Fixed scaling for selection rectangle
+
+Version 0.5 (10 October 2008): 
+- Localized user interface
+
+Version 0.6 (28 October 2008): 
+- Implemented Zoom In/Out and Rotate capabilities
+- Integrated scanning support via WIA Automation Library v2.0
+
+Version 0.7 (10 November 2008): 
+- Implemented rotate image functionality
+
+Version 0.8 (30 November 2008)
+- Minor fixes and various improvements
+
+Version 0.9 (10 January 2009)
+- Revamped localization codes
+- Added rudimentary support for English postprocessing
+
+Version 0.9.1 (18 January 2009)
+- Added watch folder monitor for Batch Processing
+
+Version 0.9.2 (15 March 2009)
+- Added text formatting functionality
+
+Version 0.9.3 (25 April 2009)
+- Refactored
+- Display appropriate error message during batch process
+
+Version 0.9.4 (21 June 2009)
+- Updated to Tesseract 2.04RC engine
+- Added progressbar for (more animated) task status
+- Added All Image Files filter
+
+Version 1.0 (1 August 2009)
+- Updated to Tessnet2 .NET wrapper for Tesseract 2.04 OCR engine
+- Added more language codes to ISO639-3.xml file
+- Fixed a long-standing issue with accessing original image from a different thread; it would throw an InvalidOperationException with message "Object is currently in use elsewhere"
+- Added support for custom text replacement in postprocessing
+
+Version 1.1 (6 September 2009)
+- Added Merge TIFF functionality
+
+Version 1.2 (10 September 2009)
+- Added support for PDF-to-image conversion using GPL Ghostscript

@@ -1,0 +1,15 @@
+VietOCR Change Summary
+
+Version 3.0 (3 October 2010)
+- Upgrade Tesseract OCR engine to 3.0
+- Replace old format (2.0x) language data with new format (3.0) language data
+- Change datafile suffix from .inttemp to .traineddata
+
+Version 3.1 (port changes from Version 2.0) (6 February 2011)
+- Upgrade JACOB library to version 1.15-M4
+- Add support for spellcheck suggestion in context menu
+- Improve program accessibility and usability
+- Add support for downloading and installing language data packs and appropriate spell dictionaries
+- Add UI localization for Lithuanian and Slovak
+- Refactoring by breaking up large classes into smaller ones
+- Update Tesseract OCR engine to 3.01 (r551)

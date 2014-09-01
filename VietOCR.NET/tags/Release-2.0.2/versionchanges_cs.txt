@@ -1,0 +1,126 @@
+VietOCR.NET Change Summary
+
+Version 0.1 (7 June 2008): 
+- Proof-of-concept design
+- Add post-processing for Vietnamese to improve accuracy
+- Integrate Tessnet2 .NET wrapper for Tesseract 2.03 OCR engine (http://www.pixel-technology.com/freeware/tessnet2/)
+- Use Vietnamese language data for Tesseract 2.03 (data for 2.01 crashes frequently with Tesseract 2.03)
+- Integrate VietKeyInput class library
+
+Version 0.2 (10 June 2008): 
+- Improve post-processing for Vietnamese
+- Add Help file
+
+Version 0.3 (21 June 2008): 
+- Add file drag-n-drop support
+- Add selection rectangle
+
+Version 0.3.1 (22 June 2008): 
+- Make Picturebox scrollable with mouse wheel
+
+Version 0.4 (1 July 2008): 
+- Code refactored
+
+Version 0.4.2 (1 August 2008): 
+- Replace RTF-based help form with HTML-based
+
+Version 0.4.3 (5 August 2008): 
+- Fix mouse wheel scrolling behavior of PictureBox and TextBox
+- Fix scaling for selection rectangle
+
+Version 0.5 (10 October 2008): 
+- Localize user interface
+
+Version 0.6 (28 October 2008): 
+- Implement Zoom In/Out and Rotate capabilities
+- Integrate scanning support via WIA Automation Library v2.0
+
+Version 0.7 (10 November 2008): 
+- Implement rotate image functionality
+
+Version 0.8 (30 November 2008)
+- Minor fixes and various improvements
+
+Version 0.9 (10 January 2009)
+- Revamp localization codes
+- Add rudimentary support for English postprocessing
+
+Version 0.9.1 (18 January 2009)
+- Add watch folder monitor for Batch Processing
+
+Version 0.9.2 (15 March 2009)
+- Add text formatting functionality
+
+Version 0.9.3 (25 April 2009)
+- Refactor
+- Display appropriate error message during batch process
+
+Version 0.9.4 (21 June 2009)
+- Update to Tesseract 2.04RC engine
+- Add progressbar for (more animated) task status
+- Add All Image Files filter
+
+Version 1.0 (1 August 2009)
+- Update to Tessnet2 .NET wrapper for Tesseract 2.04 OCR engine
+- Add more language codes to ISO639-3.xml file
+- Fix a long-standing issue with accessing original image from a different thread; it would throw an InvalidOperationException with message "Object is currently in use elsewhere"
+- Add support for custom text replacement in postprocessing
+
+Version 1.1 (6 September 2009)
+- Merge TIFF functionality
+
+Version 1.2 (10 September 2009)
+- Add support for PDF-to-image conversion using GPL Ghostscript
+
+Version 1.3 (3 October 2009)
+- Improve exception handling with appropriate error messages
+- Improve handling of PDF documents that has many (>15) pages. Putting too many images, as a result of PDF extraction, in a multi-page TIFF eventually will generate GDI+ exceptions
+- Split PDF functionality
+- Change internal image format from BMP to PNG to be able to handle more images
+
+Version 1.4 (24 October 2009)
+- Publish OCR interim results to produce more responsive UI performance, improving user experience
+- Implement cancellation of running OCR tasks
+- Merge PDF functionality
+
+Version 1.5 (21 December 2009)
+- Add support for execution from command line
+- Add support for paste image from clipboard
+
+Version 1.6 (30 January 2010)
+- Fix an image size issue and associated scale factor when toggling between Fit Image vs. Actual Size after scrolling in picturebox
+- Add unit test
+- Improve post-OCR correction for Vietnamese
+- Bundle Vietnamese language data for VNI & TCVN3 (ABC) fonts (VNI-Aptima, VNI-Book, VNI-Helve, VNI-Palatin, VNI-Tekon, VNI-Times, VNI-Univer; .VnTime, .VnArial)
+
+Version 1.7 (14 April 2010)
+- Add provision to load UTF-8 text file into textbox
+- Add Recent Files submenu
+- Fix scale factor issues in image manipulation
+- Improve postprocessing for Vietnamese
+- Add support for VNI-Centur, VNI-Goudy, VNI-Oxford, VNI-Zap fonts to Vietnamese language data
+
+Version 1.8 (6 September 2010)
+- Display image information
+- Add Screenshot Mode, which rescales low-resolution images to 300 DPI to be more suitable for OCR operations
+
+Version 1.9 (11 November 2010)
+- Integrate Hunspell library to provide spellchecking and spellcheck-as-you-type functionality
+- Add support for a custom dictionary
+- List in correct order files generated from PDF conversion
+
+Version 2.0 (6 February 2011)
+- Localize textbox's context menu
+- Add support for spellcheck suggestion in context menu
+- Improve program accessibility and usability
+- Add support for downloading and installing language data packs and appropriate spell dictionaries
+- Add UI localization for Lithuanian and Slovak
+- Refactor by breaking up large classes into smaller ones
+
+Version 2.0.1 (6 March 2011)
+- Fix a bug that crashes the program when inline spellcheck suggests on empty text
+- Fix a bug that hangs the program if x.DangAmbigs.txt contains an entry starting with an equal symbol (=)
+- Improve postprocessing performance by caching the word list used; reload only if changes
+
+Version 2.0.2 (13 March 2011)
+- Incorporate deskew functionality using GMSE Deskew algorithm

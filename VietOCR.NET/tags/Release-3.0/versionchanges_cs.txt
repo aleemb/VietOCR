@@ -1,0 +1,5 @@
+VietOCR.NET Change Summary
+
+Version 3.0 (26 June 2011)
+- Use command-line process to invoke Tesseract 3.01 (r585) binary executable
+- Include improved Vietnamese language pack
